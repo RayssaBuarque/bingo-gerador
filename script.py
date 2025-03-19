@@ -28,7 +28,7 @@ def gerar_cartela(palavras):
 
 
 """Gera n cartelas e salva todas em um único PDF"""
-def salvar_cartelas_pdf(num_cartelas, palavras, imagem="logo.png", nome_arquivo="cartelas.pdf"):
+def salvar_cartelas_pdf(num_cartelas, palavras, imagem, nome_arquivo="cartelas.pdf"):
     pdf = canvas.Canvas(nome_arquivo, pagesize=letter)
     largura, altura = letter
 
@@ -37,6 +37,7 @@ def salvar_cartelas_pdf(num_cartelas, palavras, imagem="logo.png", nome_arquivo=
     estilo_celula = estilos["Normal"]
     estilo_celula.fontName = "Helvetica"
     estilo_celula.fontSize = 9
+    estilo_celula.alignment = 1
 
     # variável que vai guardar a posição em que escrevemos no PDF
     y_pos = altura - 320
@@ -60,6 +61,7 @@ def salvar_cartelas_pdf(num_cartelas, palavras, imagem="logo.png", nome_arquivo=
             ('BOTTOMPADDING', (0, 0), (-1, -1), 10),
             ('BACKGROUND', (0, 1), (-1, -1), colors.white),
             ('GRID', (0, 0), (-1, -1), 1, colors.black),
+            ('ROUND', (0, 0), (4, 4), 50),
         ])
         
         tabela.setStyle(estilo)
@@ -83,9 +85,14 @@ def salvar_cartelas_pdf(num_cartelas, palavras, imagem="logo.png", nome_arquivo=
     pdf.save()
     print(f"{num_cartelas} cartelas salvas em {nome_arquivo}")
 
-# Executando o script
-arq_palavras = "palavras.txt"
+
+
+'''EXECUTANDO O SCRIPT'''
+
+arq_palavras = "conteudo/palavras.txt"
+logo = "conteudo/logo.png"
+
 palavras = carregar_palavras(arq_palavras)
 
-num_cartelas = int(input("Quantas cartelas deseja gerar? "))
-salvar_cartelas_pdf(num_cartelas, palavras)
+n = int(input("Quantas cartelas deseja gerar? "))
+salvar_cartelas_pdf(n, palavras,logo)

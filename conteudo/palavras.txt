@@ -1,5 +1,5 @@
 garotas
-etec
+ETEC
 podcast
 oficina
 campeonato
@@ -57,7 +57,7 @@ pão
 visitas
 voluntariado
 piquenique
-each
+EACH
 camiseta
 bolsa
 salinha

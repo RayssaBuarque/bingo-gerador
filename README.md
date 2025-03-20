@@ -1,8 +1,10 @@
-# Gerador de Cartelas de Bingo
+# Gerador de Cartelas de Bingo | ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
-Este projeto Python permite gerar cartelas de bingo a partir de um arquivo .txt contendo uma lista de palavras.
+Este projeto Python permite gerar cartelas de bingo a partir de um arquivo .txt contendo uma lista de palavras. O script gera n cartelas de bingo 5x5 com uma imagem no centro, e as salva em um único arquivo PDF.
 
-O script gera n cartelas de bingo 5x5, com uma imagem no centro e as salva em um único arquivo PDF.
+![Exemplo de imagem gerada](conteudo/thumbnail.png)
+
+Script originalmente desenvolvido para dinâmica de Bingo da Roda de Conversa do PET-SI 2025.
 
 ### Requisitos
 - Python 3.x
